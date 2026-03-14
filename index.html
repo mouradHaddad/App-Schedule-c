@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Prendre rendez-vous – ClearVision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo-wrap">
+    <div class="logo-eye">
+      <svg width="18" height="11" viewBox="0 0 18 11" fill="none">
+        <path d="M1 5.5C1 5.5 4 1 9 1C14 1 17 5.5 17 5.5C17 5.5 14 10 9 10C4 10 1 5.5 1 5.5Z" stroke="#4ecdc4" stroke-width="1.2" fill="none"/>
+        <circle cx="9" cy="5.5" r="2.2" fill="#4ecdc4"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-name">ClearVision</div>
+      <div class="logo-sub">Clinique Ophtalmologique</div>
+    </div>
+  </div>
+  <a href="tel:+33100000000" class="header-tel">📞 Appeler</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Prise de rendez-vous en ligne</div>
+  <h1>Prenez soin<br>de <em>votre vision</em></h1>
+  <p class="hero-sub">Réservez votre consultation en quelques minutes.<br>Disponible du lundi au vendredi.</p>
+</div>
+
+<!-- STEPPER -->
+<div class="stepper">
+  <div class="st-item active" id="sp1">
+    <div class="st-dot">1</div>
+    <div class="st-label">Patient</div>
+  </div>
+  <div class="st-item" id="sp2">
+    <div class="st-dot">2</div>
+    <div class="st-label">Motif</div>
+  </div>
+  <div class="st-item" id="sp3">
+    <div class="st-dot">3</div>
+    <div class="st-label">Date</div>
+  </div>
+  <div class="st-item" id="sp4">
+    <div class="st-dot">4</div>
+    <div class="st-label">Confirmer</div>
+  </div>
+</div>
+
+<!-- MAIN FORM -->
+<div class="form-wrap">
+
+  <!-- STEP 1: PATIENT -->
+  <div class="section active" id="sec1">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Informations patient</div>
+        <div class="card-desc">Tous les champs marqués * sont obligatoires.</div>
+      </div>
+      <div class="card-body">
+
+        <div class="field-row">
+          <div class="field">
+            <label>Prénom <span class="req">*</span></label>
+            <input type="text" id="prenom" placeholder="Marie" autocomplete="given-name"/>
+            <div class="err-msg" id="e-prenom">Prénom requis.</div>
+          </div>
+          <div class="field">
+            <label>Nom <span class="req">*</span></label>
+            <input type="text" id="nom" placeholder="Dupont" autocomplete="family-name"/>
+            <div class="err-msg" id="e-nom">Nom requis.</div>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Date de naissance <span class="req">*</span></label>
+            <input type="date" id="ddn"/>
+            <div class="err-msg" id="e-ddn">Date requise.</div>
+          </div>
+          <div class="field">
+            <label>Genre</label>
+            <select id="genre">
+              <option value="">Non précisé</option>
+              <option>Femme</option>
+              <option>Homme</option>
+              <option>Autre</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Téléphone <span class="req">*</span></label>
+          <input type="tel" id="tel" placeholder="06 12 34 56 78" autocomplete="tel"/>
+          <div class="err-msg" id="e-tel">Numéro valide requis.</div>
+        </div>
+
+        <div class="field">
+          <label>Adresse e-mail <span class="req">*</span></label>
+          <input type="email" id="email" placeholder="marie@email.fr" autocomplete="email"/>
+          <div class="err-msg" id="e-email">E-mail valide requis.</div>
+        </div>
+
+        <div class="field">
+          <label>Type de patient</label>
+          <div class="chips">
+            <div class="chip"><input type="radio" name="typePatient" id="tp-new" value="Nouveau patient" checked/><label for="tp-new">🌟 Nouveau patient</label></div>
+            <div class="chip"><input type="radio" name="typePatient" id="tp-ex" value="Patient existant"/><label for="tp-ex">👤 Patient existant</label></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Mutuelle / Assurance</label>
+          <select id="mutuelle">
+            <option value="">Sélectionner (ou sans mutuelle)</option>
+            <option>Harmonie Mutuelle</option>
+            <option>MGEN</option>
+            <option>Malakoff Humanis</option>
+            <option>Allianz</option>
+            <option>AXA Santé</option>
+            <option>Sécurité Sociale uniquement</option>
+            <option>Sans mutuelle</option>
+            <option>Autre</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Info box -->
+    <div class="info-box">
+      <div class="info-box-title">📋 Ce qu'il faut apporter</div>
+      <ul class="info-list">
+        <li>Carte Vitale et mutuelle</li>
+        <li>Ordonnance ou courrier de votre médecin (si disponible)</li>
+        <li>Vos lunettes ou lentilles actuelles</li>
+        <li>Liste de vos médicaments en cours</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- STEP 2: MOTIF -->
+  <div class="section" id="sec2">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Motif de la consultation</div>
+        <div class="card-desc">Aidez-nous à vous orienter vers le bon spécialiste.</div>
+      </div>
+      <div class="card-body">
+
+        <div class="field">
+          <label>Raison de la visite <span class="req">*</span></label>
+          <div class="chips">
+            <div class="chip"><input type="radio" name="motif" id="m1" value="Bilan visuel complet" checked/><label for="m1">👁 Bilan visuel complet</label></div>
+            <div class="chip"><input type="radio" name="motif" id="m2" value="Lunettes / Lentilles"/><label for="m2">👓 Lunettes / Lentilles</label></div>
+            <div class="chip"><input type="radio" name="motif" id="m3" value="Glaucome"/><label for="m3">🔬 Glaucome</label></div>
+            <div class="chip"><input type="radio" name="motif" id="m4" value="Cataracte"/><label for="m4">💎 Cataracte</label></div>
+            <div class="chip"><input type="radio" name="motif" id="m5" value="LASIK / Chirurgie réfractive"/><label for="m5">✨ Chirurgie réfractive</label></div>
+            <div class="chip"><input type="radio" name="motif" id="m6" value="Examen rétinien"/><label for="m6">🔭 Examen rétinien</label></div>
+            <div class="chip"><input type="radio" name="motif" id="m7" value="Urgence / Baisse visuelle soudaine"/><label for="m7">⚡ Urgence visuelle</label></div>
+            <div class="chip"><input type="radio" name="motif" id="m8" value="Autre"/><label for="m8">📋 Autre</label></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Œil concerné</label>
+          <div class="chips">
+            <div class="chip"><input type="radio" name="oeil" id="o1" value="Les deux" checked/><label for="o1">Les deux</label></div>
+            <div class="chip"><input type="radio" name="oeil" id="o2" value="Œil gauche"/><label for="o2">Œil gauche</label></div>
+            <div class="chip"><input type="radio" name="oeil" id="o3" value="Œil droit"/><label for="o3">Œil droit</label></div>
+            <div class="chip"><input type="radio" name="oeil" id="o4" value="Indéterminé"/><label for="o4">Indéterminé</label></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Symptômes actuels (plusieurs choix possibles)</label>
+          <div class="chips">
+            <div class="chip"><input type="checkbox" id="s1"/><label for="s1">Vision floue</label></div>
+            <div class="chip"><input type="checkbox" id="s2"/><label for="s2">Douleur oculaire</label></div>
+            <div class="chip"><input type="checkbox" id="s3"/><label for="s3">Rougeur</label></div>
+            <div class="chip"><input type="checkbox" id="s4"/><label for="s4">Mouches / flashs</label></div>
+            <div class="chip"><input type="checkbox" id="s5"/><label for="s5">Sécheresse</label></div>
+            <div class="chip"><input type="checkbox" id="s6"/><label for="s6">Vision double</label></div>
+            <div class="chip"><input type="checkbox" id="s7"/><label for="s7">Photophobie</label></div>
+            <div class="chip"><input type="checkbox" id="s8"/><label for="s8">Aucun symptôme</label></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Médecin préféré</label>
+          <select id="medecin">
+            <option value="">Pas de préférence</option>
+            <option>Dr. Sarah Okafor, MD</option>
+            <option>Dr. Michael Chen, OD</option>
+            <option>Dr. Layla Haddad, MD</option>
+            <option>Dr. James Rivera, OD</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Informations complémentaires</label>
+          <textarea id="notes" placeholder="Décrivez vos symptômes, traitements en cours ou toute information utile pour votre médecin…"></textarea>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- STEP 3: DATE & HEURE -->
+  <div class="section" id="sec3">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Date &amp; Horaire</div>
+        <div class="card-desc">Choisissez une date et un créneau disponible.</div>
+      </div>
+      <div class="card-body">
+
+        <div class="field">
+          <label>Date souhaitée <span class="req">*</span></label>
+          <input type="date" id="dateRdv" min=""/>
+          <div class="err-msg" id="e-date">Veuillez sélectionner une date.</div>
+          <div class="hint">Consultations disponibles du lundi au vendredi.</div>
+        </div>
+
+        <div class="field">
+          <label>Créneau horaire <span class="req">*</span></label>
+          <div class="time-grid">
+            <div class="ts"><input type="radio" name="heure" id="h1" value="08h00"/><label for="h1">08h00</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h2" value="08h30"/><label for="h2">08h30</label></div>
+            <div class="ts off"><input type="radio" name="heure" id="h3" value="09h00" disabled/><label for="h3">09h00</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h4" value="09h30"/><label for="h4">09h30</label></div>
+            <div class="ts off"><input type="radio" name="heure" id="h5" value="10h00" disabled/><label for="h5">10h00</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h6" value="10h30"/><label for="h6">10h30</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h7" value="11h00"/><label for="h7">11h00</label></div>
+            <div class="ts off"><input type="radio" name="heure" id="h8" value="11h30" disabled/><label for="h8">11h30</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h9" value="14h00"/><label for="h9">14h00</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h10" value="14h30"/><label for="h10">14h30</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h11" value="15h00"/><label for="h11">15h00</label></div>
+            <div class="ts off"><input type="radio" name="heure" id="h12" value="15h30" disabled/><label for="h12">15h30</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h13" value="16h00"/><label for="h13">16h00</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h14" value="16h30"/><label for="h14">16h30</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h15" value="17h00"/><label for="h15">17h00</label></div>
+            <div class="ts"><input type="radio" name="heure" id="h16" value="17h30"/><label for="h16">17h30</label></div>
+          </div>
+          <div class="err-msg show" id="e-heure" style="display:none;">Veuillez choisir un créneau.</div>
+          <div class="hint" style="margin-top:0.4rem;">Créneaux grisés = déjà réservés.</div>
+        </div>
+
+        <div class="field">
+          <label>Rappels par</label>
+          <div class="chips">
+            <div class="chip"><input type="checkbox" id="r1" checked/><label for="r1">📧 E-mail</label></div>
+            <div class="chip"><input type="checkbox" id="r2"/><label for="r2">💬 SMS</label></div>
+            <div class="chip"><input type="checkbox" id="r3"/><label for="r3">📞 Téléphone</label></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- STEP 4: RECAP -->
+  <div class="section" id="sec4">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Récapitulatif</div>
+        <div class="card-desc">Vérifiez vos informations avant de confirmer.</div>
+      </div>
+      <div class="card-body">
+        <div class="summary" id="recap"></div>
+
+        <div class="consent-wrap" style="margin-top:1rem;">
+          <input type="checkbox" id="consent"/>
+          <label for="consent">
+            Je certifie que les informations saisies sont exactes et j'accepte les
+            <a href="#">conditions d'annulation</a> et la
+            <a href="#">politique de confidentialité</a> de la clinique.
+          </label>
+        </div>
+        <div class="err-msg" id="e-consent">Veuillez cocher la case pour continuer.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SUCCESS -->
+  <div class="success" id="successScreen">
+    <div class="success-circle">✓</div>
+    <h2>Rendez-vous confirmé !</h2>
+    <p>Votre demande a bien été reçue. Un e-mail de confirmation vous sera envoyé dans les 15 minutes.</p>
+    <div class="conf-box">
+      <div class="conf-tag">Détails de votre rendez-vous</div>
+      <div class="conf-line" id="conf-nom"></div>
+      <div class="conf-line" id="conf-motif"></div>
+      <div class="conf-line" id="conf-dt"></div>
+    </div>
+    <button class="btn btn-ghost" onclick="resetForm()">← Nouveau rendez-vous</button>
+  </div>
+
+  <footer>
+    © 2025 ClearVision Clinique Ophtalmologique ·
+    <a href="#">Mentions légales</a> · <a href="#">Accessibilité</a>
+  </footer>
+
+</div>
+
+<!-- STICKY NAV -->
+<div class="sticky-nav" id="stickyNav">
+  <button class="btn btn-ghost" id="btnBack" onclick="prev()" style="visibility:hidden;">← Retour</button>
+  <span class="step-count" id="stepCount">Étape 1 sur 4</span>
+  <button class="btn btn-primary" id="btnNext" onclick="next()">Continuer →</button>
+</div>
+
+<script src="Js/app.js">
+  
+</script>
+</body>
+</html>
